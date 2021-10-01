@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<p>
+    {% for item in article %}
+        <h1 dir="rtl">
+            {{item.title}}
+        </h1>
+        <p dir="rtl">
+            {{item.description}}
+        <p>
+        <p dir="rtl">
+            <img height="150px" src = "{{ item.image.url }}"></img>
+        </p>
+    {% endfor %}
+</p>
+
+{% endblock %}
